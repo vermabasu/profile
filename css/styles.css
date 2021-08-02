@@ -11026,3 +11026,7 @@ header.masthead h1, header.masthead .h1 {
   text-align: center;
 }
 
+
+.fa_custom {
+  color: rgb(243, 236, 236);
+  }
