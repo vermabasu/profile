@@ -10105,3 +10105,81 @@ div#home:after {
     padding-top: 50px;
   }
 }
+
+
+.about_me_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px; /* space between text and image */
+  padding: 40px;
+}
+
+.About_me_Text {
+  flex: 1;
+}
+
+.About_me_image {
+  flex-shrink: 0;
+}
+
+.About_me_image img {
+  max-width: 231px; /* or any suitable width */
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .about_me_container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .About_me_image img {
+      max-width: 100%;
+  }
+}
+
+
+
+
+
+.pub-list {
+  counter-reset: pub-counter;
+  max-width: 800px;
+  margin: auto;
+}
+
+.publication {
+  margin-bottom: 30px;
+}
+
+.publication::before {
+  counter-increment: pub-counter;
+  content: counter(pub-counter) ". ";
+  color: #f26522;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.pub-title {
+  font-size: 18px;
+  color: #f26522;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.pub-title:hover {
+  text-decoration: underline;
+}
+
+.authors {
+  margin-top: 5px;
+  color: #333;
+}
+
+.conference {
+  color: #444;
+  font-style: italic;
+  font-size: 14px;
+}
